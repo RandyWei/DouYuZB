@@ -10,12 +10,12 @@
 		2EAA75D6F097888058E9FE38 /* Pods_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212EFCA30976C27ED85E05B /* Pods_DouYuZBUITests.framework */; };
 		6C15BF5B4D99F7EB182877A0 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D7E2F7C9FB56FA10CB08E8 /* Pods_DouYuZBTests.framework */; };
 		B6BDFE69232354600009C24F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE68232354600009C24F /* AppDelegate.swift */; };
-		B6BDFE6B232354600009C24F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE6A232354600009C24F /* ViewController.swift */; };
 		B6BDFE6E232354600009C24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE6C232354600009C24F /* Main.storyboard */; };
 		B6BDFE70232354620009C24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE6F232354620009C24F /* Assets.xcassets */; };
 		B6BDFE73232354620009C24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE71232354620009C24F /* LaunchScreen.storyboard */; };
 		B6BDFE7E232354620009C24F /* DouYuZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE7D232354620009C24F /* DouYuZBTests.swift */; };
 		B6BDFE89232354620009C24F /* DouYuZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE88232354620009C24F /* DouYuZBUITests.swift */; };
+		B6BDFE9E232356790009C24F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE9D232356790009C24F /* MainViewController.swift */; };
 		E116ADCCBD7DA6CC4D85DC79 /* Pods_DouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAC65AB12A2648C86DF1F7A /* Pods_DouYuZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		B4588F116A9327FBFAE44205 /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		B6BDFE65232354600009C24F /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BDFE68232354600009C24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6BDFE6A232354600009C24F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6BDFE6D232354600009C24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BDFE6F232354620009C24F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BDFE72232354620009C24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		B6BDFE84232354620009C24F /* DouYuZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BDFE88232354620009C24F /* DouYuZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYuZBUITests.swift; sourceTree = "<group>"; };
 		B6BDFE8A232354620009C24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6BDFE9D232356790009C24F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD10D9586DCAE5B852BB29A7 /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		DBEE4D5B0041AEA985E948D2 /* Pods-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZBUITests/Pods-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FFAC65AB12A2648C86DF1F7A /* Pods_DouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,9 +137,8 @@
 		B6BDFE67232354600009C24F /* DouYuZB */ = {
 			isa = PBXGroup;
 			children = (
+				B6BDFE962323560E0009C24F /* Classes */,
 				B6BDFE68232354600009C24F /* AppDelegate.swift */,
-				B6BDFE6A232354600009C24F /* ViewController.swift */,
-				B6BDFE6C232354600009C24F /* Main.storyboard */,
 				B6BDFE6F232354620009C24F /* Assets.xcassets */,
 				B6BDFE71232354620009C24F /* LaunchScreen.storyboard */,
 				B6BDFE74232354620009C24F /* Info.plist */,
@@ -163,6 +162,63 @@
 				B6BDFE8A232354620009C24F /* Info.plist */,
 			);
 			path = DouYuZBUITests;
+			sourceTree = "<group>";
+		};
+		B6BDFE962323560E0009C24F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDFE9C232356460009C24F /* Tools */,
+				B6BDFE9B2323563D0009C24F /* Profile */,
+				B6BDFE9A232356340009C24F /* Follow */,
+				B6BDFE992323562E0009C24F /* Live */,
+				B6BDFE98232356250009C24F /* Home */,
+				B6BDFE972323561D0009C24F /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B6BDFE972323561D0009C24F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B6BDFE6C232354600009C24F /* Main.storyboard */,
+				B6BDFE9D232356790009C24F /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B6BDFE98232356250009C24F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B6BDFE992323562E0009C24F /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		B6BDFE9A232356340009C24F /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		B6BDFE9B2323563D0009C24F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B6BDFE9C232356460009C24F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BDFE6B232354600009C24F /* ViewController.swift in Sources */,
 				B6BDFE69232354600009C24F /* AppDelegate.swift in Sources */,
+				B6BDFE9E232356790009C24F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
