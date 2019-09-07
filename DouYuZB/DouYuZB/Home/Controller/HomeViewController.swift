@@ -8,7 +8,17 @@
 
 import UIKit
 
+private let kPageTitleViewHeight:CGFloat = 40
+
 class HomeViewController: UIViewController {
+    
+    //MARK: 懒加载属性
+    private lazy var pageTitleView:PageTitleView = {
+        let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenWidth, height: kPageTitleViewHeight)
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titleView = PageTitleView(frame: frame, titles: titles)
+        return titleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +31,13 @@ class HomeViewController: UIViewController {
 // MARK: - 设置界面
 extension HomeViewController{
     private func setupUI(){
+        
+        
+        
         setupNavigation()
+        
+        //添加TitleView
+        view.addSubview(pageTitleView)
     }
     
     private func setupNavigation(){
@@ -71,4 +87,6 @@ extension HomeViewController{
         let size = CGSize(width:40,height:40)
         navigationItem.rightBarButtonItems = [UIBarButtonItem(imageName: "image_my_history",hightlightImageName: "Image_my_history_click",size: size),UIBarButtonItem(imageName: "Image_scan",hightlightImageName: "Image_scan_click",size: size),UIBarButtonItem(imageName: "btn_search",hightlightImageName: "btn_search_clicked",size: size)]
     }
+    
+    
 }
