@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate : class {
+    func pageTitleView(pageTitleView:PageTitleView,selectedIndex index:Int)
+}
+
 private let kScrollLineH:CGFloat = 2
+private let kNormalColor:(CGFloat,CGFloat,CGFloat) = (85,85,85)
+private let kSelectedColor:(CGFloat,CGFloat,CGFloat)=(255,128,0)
 
 class PageTitleView: UIView {
 
     private var titles:[String]
-    
+    weak var delegate:PageTitleViewDelegate?
+    private var currentIndex = 0
     private lazy var titlelLabels = [UILabel]()
     
     private lazy var scrollLineView:UIView = {
@@ -72,7 +79,7 @@ extension PageTitleView{
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.darkGray
+            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
             label.textAlignment = .center
             
             //设置frame
@@ -83,6 +90,11 @@ extension PageTitleView{
             //将label添加到scrollView
             scrollView.addSubview(label)
             titlelLabels.append(label)
+            
+            //添加手势监听
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.labelTap(ges:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     private func setupScrollLineAndBottomLine(){
@@ -96,8 +108,58 @@ extension PageTitleView{
         guard let firstLabel = titlelLabels.first else {
             return
         }
-        firstLabel.textColor = UIColor.orange
+        firstLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
         scrollLineView.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
         scrollView.addSubview(scrollLineView)
+    }
+}
+
+extension PageTitleView{
+    @objc private func labelTap(ges:UITapGestureRecognizer){
+        //当前点击的Label
+        guard let currentTapLabel = ges.view as? UILabel else {
+            return
+        }
+        //上一个选中的Label
+        let lastLabel = titlelLabels[currentIndex]
+        
+        //设置颜色
+        currentTapLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
+        lastLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+        
+        currentIndex = currentTapLabel.tag
+        
+        //滚动条位置发生改变
+        let scrollLineX = CGFloat(currentIndex) * scrollLineView.frame.width
+        
+        UIView.animate(withDuration: TimeInterval(0.15)) {
+            self.scrollLineView.frame.origin.x = scrollLineX
+        }
+        
+        //通知代理
+        delegate?.pageTitleView(pageTitleView: self, selectedIndex: currentIndex)
+        
+    }
+}
+
+extension PageTitleView{
+    func setTitleWithProgress(progress:CGFloat,sourceIndex:Int,targetIndex:Int){
+        //取出sourceLabel\targetLabel
+        let sourceLabel = titlelLabels[sourceIndex]
+        let targetLabel = titlelLabels[targetIndex]
+        
+        //设置滑块
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLineView.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //设置颜色
+        let colorDelta = (kSelectedColor.0 - kNormalColor.0,kSelectedColor.1-kNormalColor.1,kSelectedColor.2-kNormalColor.2)
+        sourceLabel.textColor = UIColor(r: kSelectedColor.0 - progress * colorDelta.0, g: kSelectedColor.1 - progress * colorDelta.1, b: kSelectedColor.2 - progress * colorDelta.2)
+        
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + progress * colorDelta.0, g: kNormalColor.1 + progress * colorDelta.1, b: kNormalColor.2 + progress * colorDelta.2)
+        
+        //记录最新的index
+        currentIndex = targetIndex
     }
 }
