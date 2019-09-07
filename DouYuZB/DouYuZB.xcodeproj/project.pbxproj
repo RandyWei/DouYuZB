@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2EAA75D6F097888058E9FE38 /* Pods_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212EFCA30976C27ED85E05B /* Pods_DouYuZBUITests.framework */; };
 		6C15BF5B4D99F7EB182877A0 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D7E2F7C9FB56FA10CB08E8 /* Pods_DouYuZBTests.framework */; };
+		B60C7D3F23236607001161ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D3D23236607001161ED /* Main.storyboard */; };
 		B6BDFE69232354600009C24F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE68232354600009C24F /* AppDelegate.swift */; };
-		B6BDFE6E232354600009C24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE6C232354600009C24F /* Main.storyboard */; };
 		B6BDFE70232354620009C24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE6F232354620009C24F /* Assets.xcassets */; };
 		B6BDFE73232354620009C24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE71232354620009C24F /* LaunchScreen.storyboard */; };
 		B6BDFE7E232354620009C24F /* DouYuZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE7D232354620009C24F /* DouYuZBTests.swift */; };
@@ -43,9 +43,9 @@
 		9212EFCA30976C27ED85E05B /* Pods_DouYuZBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B15DE73D034BD3CBE9D65D3 /* Pods-DouYuZBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZBTests/Pods-DouYuZBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4588F116A9327FBFAE44205 /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
+		B60C7D3E23236607001161ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BDFE65232354600009C24F /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BDFE68232354600009C24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6BDFE6D232354600009C24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BDFE6F232354620009C24F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BDFE72232354620009C24F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BDFE74232354620009C24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 		B6BDFE972323561D0009C24F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B6BDFE6C232354600009C24F /* Main.storyboard */,
 				B6BDFE9D232356790009C24F /* MainViewController.swift */,
+				B60C7D3D23236607001161ED /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -328,9 +328,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60C7D3F23236607001161ED /* Main.storyboard in Resources */,
 				B6BDFE73232354620009C24F /* LaunchScreen.storyboard in Resources */,
 				B6BDFE70232354620009C24F /* Assets.xcassets in Resources */,
-				B6BDFE6E232354600009C24F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,10 +449,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6BDFE6C232354600009C24F /* Main.storyboard */ = {
+		B60C7D3D23236607001161ED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6BDFE6D232354600009C24F /* Base */,
+				B60C7D3E23236607001161ED /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
