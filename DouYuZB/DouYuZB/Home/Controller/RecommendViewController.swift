@@ -30,7 +30,8 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds,collectionViewLayout:layout)
         collectionView.dataSource = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
+        collectionView.backgroundColor = UIColor.white
         return collectionView
     }()
 
@@ -71,8 +72,6 @@ extension RecommendViewController:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
-        
-        header.backgroundColor = UIColor.purple
         
         return header
     }
