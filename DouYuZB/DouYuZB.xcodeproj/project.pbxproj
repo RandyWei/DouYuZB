@@ -10,6 +10,10 @@
 		2EAA75D6F097888058E9FE38 /* Pods_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212EFCA30976C27ED85E05B /* Pods_DouYuZBUITests.framework */; };
 		6C15BF5B4D99F7EB182877A0 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D7E2F7C9FB56FA10CB08E8 /* Pods_DouYuZBTests.framework */; };
 		B60C7D3F23236607001161ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D3D23236607001161ED /* Main.storyboard */; };
+		B60C7D42232367F6001161ED /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D41232367F6001161ED /* Home.storyboard */; };
+		B60C7D4723236827001161ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D4623236827001161ED /* Main.storyboard */; };
+		B60C7D492323683E001161ED /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D482323683E001161ED /* Follow.storyboard */; };
+		B60C7D4B23236852001161ED /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D4A23236852001161ED /* Profile.storyboard */; };
 		B6BDFE69232354600009C24F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BDFE68232354600009C24F /* AppDelegate.swift */; };
 		B6BDFE70232354620009C24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE6F232354620009C24F /* Assets.xcassets */; };
 		B6BDFE73232354620009C24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BDFE71232354620009C24F /* LaunchScreen.storyboard */; };
@@ -44,6 +48,10 @@
 		9B15DE73D034BD3CBE9D65D3 /* Pods-DouYuZBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZBTests/Pods-DouYuZBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4588F116A9327FBFAE44205 /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		B60C7D3E23236607001161ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B60C7D41232367F6001161ED /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B60C7D4623236827001161ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B60C7D482323683E001161ED /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
+		B60C7D4A23236852001161ED /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B6BDFE65232354600009C24F /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BDFE68232354600009C24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BDFE6F232354620009C24F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,39 +120,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B60C7D35232362F8001161ED /* Home */ = {
+		B60C7D40232367E1001161ED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B60C7D41232367F6001161ED /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B60C7D36232362FD001161ED /* Live */ = {
+		B60C7D4323236807001161ED /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				B60C7D4623236827001161ED /* Main.storyboard */,
 			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		B60C7D3723236303001161ED /* Follow */ = {
+		B60C7D442323680B001161ED /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				B60C7D482323683E001161ED /* Follow.storyboard */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
 		};
-		B60C7D3923236317001161ED /* Profile */ = {
+		B60C7D4523236812001161ED /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B60C7D4A23236852001161ED /* Profile.storyboard */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		B60C7D3A2323631E001161ED /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		B6BDFE5C232354600009C24F = {
@@ -202,11 +207,10 @@
 		B6BDFE962323560E0009C24F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B60C7D3A2323631E001161ED /* Tools */,
-				B60C7D3923236317001161ED /* Profile */,
-				B60C7D3723236303001161ED /* Follow */,
-				B60C7D36232362FD001161ED /* Live */,
-				B60C7D35232362F8001161ED /* Home */,
+				B60C7D4523236812001161ED /* Profile */,
+				B60C7D442323680B001161ED /* Follow */,
+				B60C7D4323236807001161ED /* Live */,
+				B60C7D40232367E1001161ED /* Home */,
 				B6BDFE972323561D0009C24F /* Main */,
 			);
 			path = Classes;
@@ -329,8 +333,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60C7D3F23236607001161ED /* Main.storyboard in Resources */,
+				B60C7D4723236827001161ED /* Main.storyboard in Resources */,
 				B6BDFE73232354620009C24F /* LaunchScreen.storyboard in Resources */,
 				B6BDFE70232354620009C24F /* Assets.xcassets in Resources */,
+				B60C7D42232367F6001161ED /* Home.storyboard in Resources */,
+				B60C7D4B23236852001161ED /* Profile.storyboard in Resources */,
+				B60C7D492323683E001161ED /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
