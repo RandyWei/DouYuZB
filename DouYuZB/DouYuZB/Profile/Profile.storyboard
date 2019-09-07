@@ -39,7 +39,7 @@
         <scene sceneID="z99-rY-1FH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rok-0c-Ws1" userLabel="Profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="w7M-QB-SF7"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="w7M-QB-SF7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PGe-3k-DWE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -55,4 +55,8 @@
             <point key="canvasLocation" x="-1241" y="825"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
+    </resources>
 </document>

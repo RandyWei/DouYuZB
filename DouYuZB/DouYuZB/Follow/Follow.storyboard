@@ -39,7 +39,7 @@
         <scene sceneID="0gM-Yl-rQn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HMW-or-p8C" userLabel="Follow" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="关注" id="eet-hf-nWB"/>
+                    <tabBarItem key="tabBarItem" title="关注" image="btn_column_normal" selectedImage="btn_column_selected" id="eet-hf-nWB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aqb-Ea-Mt9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -55,4 +55,8 @@
             <point key="canvasLocation" x="328" y="764"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_column_normal" width="24" height="24"/>
+        <image name="btn_column_selected" width="24" height="24"/>
+    </resources>
 </document>

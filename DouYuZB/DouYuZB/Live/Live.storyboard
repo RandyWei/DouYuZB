@@ -39,7 +39,7 @@
         <scene sceneID="oGP-B3-dNT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MS6-Cu-9RN" userLabel="Live" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="直播" id="Jgv-qV-8fm"/>
+                    <tabBarItem key="tabBarItem" title="直播" image="btn_live_normal" selectedImage="btn_live_selected" id="Jgv-qV-8fm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZXN-NQ-il9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -55,4 +55,8 @@
             <point key="canvasLocation" x="328.98550724637681" y="66.964285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_live_normal" width="30" height="24"/>
+        <image name="btn_live_selected" width="30" height="24"/>
+    </resources>
 </document>
