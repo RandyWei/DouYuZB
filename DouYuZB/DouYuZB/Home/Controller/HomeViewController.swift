@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     }()
     
     private lazy var pageContentView:PageContentView = { [weak self] in
-        let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kPageTitleViewHeight, width: kScreenWidth, height: kScreenHeight - (kStatusBarH + kNavigationBarH + kPageTitleViewHeight))
+        let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kPageTitleViewHeight, width: kScreenWidth, height: kScreenHeight - (kStatusBarH + kNavigationBarH + kPageTitleViewHeight + kTabbarH))
         
         var childVcs = [UIViewController]()
         childVcs.append(RecommendViewController())

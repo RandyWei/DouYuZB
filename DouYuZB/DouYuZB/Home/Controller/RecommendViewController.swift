@@ -8,14 +8,74 @@
 
 import UIKit
 
+private let kItemMargin:CGFloat = 10
+private let kItemW:CGFloat = (kScreenWidth-3*kItemMargin)/2
+private let kItemH:CGFloat = kItemW * 3 / 4
+private let kHeaderH:CGFloat = 44
+
+private let kNormalCellID = "kNormalCellID"
+private let kHeaderID = "kHeaderID"
+
 class RecommendViewController: UIViewController {
+    
+    private lazy var collectionView:UICollectionView = { [unowned self] in
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width:kItemW,height:kItemH)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = kItemMargin
+        layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kHeaderH)
+        //设置collection view的边距
+        layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
+        
+        let collectionView = UICollectionView(frame: self.view.bounds,collectionViewLayout:layout)
+        collectionView.dataSource = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
+        return collectionView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.red
+        setupUI()
+        
+        collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
     
+}
 
+extension RecommendViewController{
+    func setupUI(){
+        view.addSubview(collectionView)
+    }
+}
 
+extension RecommendViewController:UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 8
+        }
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        
+        cell.contentView.backgroundColor = UIColor.orange
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
+        
+        header.backgroundColor = UIColor.purple
+        
+        return header
+    }
+    
+    
 }

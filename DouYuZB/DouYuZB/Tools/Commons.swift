@@ -18,3 +18,4 @@ let iPhoneX = ((kScreenHeight == 812.0) || (kScreenHeight == 896.0) ? true : fal
 let kStatusBarH:CGFloat = iPhoneX ? 44.0 : 20.0
 // 适配iPhone X 导航栏高度
 let kNavigationBarH:CGFloat = 44.0
+let kTabbarH:CGFloat = 44.0
