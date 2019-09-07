@@ -19,6 +19,7 @@
 		B60C7D9723236D7D001161ED /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C7D9623236D7D001161ED /* Profile.storyboard */; };
 		B60C7D9923236ECB001161ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7D9823236ECB001161ED /* MainViewController.swift */; };
 		B60C7D9E23237EDE001161ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7D9D23237EDE001161ED /* HomeViewController.swift */; };
+		B60C7DA1232384CC001161ED /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7DA0232384CC001161ED /* UIBarButtonItem-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B60C7D9623236D7D001161ED /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B60C7D9823236ECB001161ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B60C7D9D23237EDE001161ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B60C7DA0232384CC001161ED /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		B60C7D8B23236B0C001161ED /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B60C7D9F2323849B001161ED /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -210,6 +213,14 @@
 				B60C7D9D23237EDE001161ED /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B60C7D9F2323849B001161ED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B60C7DA0232384CC001161ED /* UIBarButtonItem-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 			files = (
 				B60C7D5923236AD9001161ED /* AppDelegate.swift in Sources */,
 				B60C7D9923236ECB001161ED /* MainViewController.swift in Sources */,
+				B60C7DA1232384CC001161ED /* UIBarButtonItem-Extension.swift in Sources */,
 				B60C7D9E23237EDE001161ED /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

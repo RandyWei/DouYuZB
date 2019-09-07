@@ -28,6 +28,7 @@ extension HomeViewController{
         
         //原始方法-----
         //设置左侧logo图片
+        /*
         let leftBarButtonItem = UIButton()
         leftBarButtonItem.setImage(UIImage(named: "logo"), for: .normal)
         leftBarButtonItem.sizeToFit()
@@ -51,7 +52,23 @@ extension HomeViewController{
         searchBtn.frame = CGRect(origin: CGPoint.zero, size: size)
         
         navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: historyBtn),UIBarButtonItem(customView: qrcodeBtn),UIBarButtonItem(customView: searchBtn)]
+        */
         
+        //扩展类方法
+        /*
+        let leftBarButtonItem = UIButton()
+        leftBarButtonItem.setImage(UIImage(named: "logo"), for: .normal)
+        leftBarButtonItem.sizeToFit()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarButtonItem)
         
+        let size = CGSize(width:40,height:40)
+        navigationItem.rightBarButtonItems = [UIBarButtonItem.createItem(imageName: "image_my_history",hightlightImageName: "Image_my_history_click",size: size),UIBarButtonItem.createItem(imageName: "Image_scan",hightlightImageName: "Image_scan_click",size: size),UIBarButtonItem.createItem(imageName: "btn_search",hightlightImageName: "btn_search_clicked",size: size)]
+        */
+        
+        //扩展构造方法
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
+        
+        let size = CGSize(width:40,height:40)
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(imageName: "image_my_history",hightlightImageName: "Image_my_history_click",size: size),UIBarButtonItem(imageName: "Image_scan",hightlightImageName: "Image_scan_click",size: size),UIBarButtonItem(imageName: "btn_search",hightlightImageName: "btn_search_clicked",size: size)]
     }
 }
