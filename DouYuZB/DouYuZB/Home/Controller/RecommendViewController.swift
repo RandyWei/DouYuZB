@@ -38,12 +38,15 @@ class RecommendViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         return collectionView
         }()
+    private lazy var recommendVM:RecommendViewModel = RecommendViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        
+        loadData()
     }
     
 }
@@ -51,6 +54,12 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController{
     func setupUI(){
         view.addSubview(collectionView)
+    }
+}
+
+extension RecommendViewController{
+    func loadData(){
+        recommendVM.requestData()
     }
 }
 

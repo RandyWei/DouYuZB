@@ -33,6 +33,8 @@
 		B60C7DB42323CF70001161ED /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */; };
 		B60C7DB72323DC96001161ED /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */; };
 		B60C7DB82323DC96001161ED /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */; };
+		B6FF6A3E2324B9C500FBF26D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A3D2324B9C500FBF26D /* Network.swift */; };
+		B6FF6A412324BF7300FBF26D /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */; };
 		FF339BC4513D9F2B22461578 /* Pods_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50D18C68497700DBA785A33 /* Pods_DouYuZBUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		B6FF6A3D2324B9C500FBF26D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		BD5A8D5043A0BDA0A0FA82BB /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		C05C79ADA3D4C65DEFEB2AF9 /* Pods-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZBUITests/Pods-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1DA8260A4C2E96A77A3DD4 /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 		B60C7D8723236AF6001161ED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B6FF6A3F2324BF5800FBF26D /* ViewModel */,
 				B60C7D9A23237E9C001161ED /* Model */,
 				B60C7D9B23237EA5001161ED /* View */,
 				B60C7D9C23237EA9001161ED /* Controller */,
@@ -252,6 +257,7 @@
 			children = (
 				B60C7D9F2323849B001161ED /* Extension */,
 				B60C7DA523238E68001161ED /* Commons.swift */,
+				B6FF6A3D2324B9C500FBF26D /* Network.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -302,6 +308,14 @@
 				B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B6FF6A3F2324BF5800FBF26D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FF6A3E2324B9C500FBF26D /* Network.swift in Sources */,
 				B60C7D5923236AD9001161ED /* AppDelegate.swift in Sources */,
 				B60C7DAF2323C4ED001161ED /* CollectionHeaderView.swift in Sources */,
 				B60C7DAA2323A009001161ED /* UIColor-Extension.swift in Sources */,
@@ -533,6 +548,7 @@
 				B60C7DB72323DC96001161ED /* CollectionPrettyCell.swift in Sources */,
 				B60C7DB32323CF70001161ED /* CollectionNormalCell.swift in Sources */,
 				B60C7D9E23237EDE001161ED /* HomeViewController.swift in Sources */,
+				B6FF6A412324BF7300FBF26D /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
