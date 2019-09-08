@@ -59,20 +59,19 @@ extension RecommendViewController{
 
 extension RecommendViewController{
     func loadData(){
-        recommendVM.requestData()
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+        }
     }
 }
 
 extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        return recommendVM.anchorGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -90,7 +89,9 @@ extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath) as! CollectionHeaderView
+        
+        header.group = recommendVM.anchorGroups[indexPath.section]
         
         return header
     }
