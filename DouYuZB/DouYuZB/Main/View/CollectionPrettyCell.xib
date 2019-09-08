@@ -20,19 +20,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVj-R6-kks">
-                        <rect key="frame" x="5" y="173" width="46" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="KcJ-23-cso"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="173" width="46" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="广州市" image="ico_location">
                             <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-dT-tKV">
-                        <rect key="frame" x="5" y="154" width="139" height="14"/>
+                        <rect key="frame" x="0.0" y="154" width="149" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="14" id="GHU-we-eVF"/>
+                            <constraint firstAttribute="height" constant="14" id="Awk-dQ-mJZ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="UAc-YJ-UG9"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
@@ -41,7 +39,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-AS-Iby">
                         <rect key="frame" x="0.0" y="0.0" width="149" height="149"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Gm4-AS-Iby" secondAttribute="height" multiplier="1:1" id="dVi-9y-5f4"/>
+                            <constraint firstAttribute="width" secondItem="Gm4-AS-Iby" secondAttribute="height" multiplier="1:1" id="wsZ-sj-W6h"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -66,18 +64,20 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="ea1-ws-U4V" firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" constant="-5" id="18v-gx-wtx"/>
-                <constraint firstItem="ROp-dT-tKV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="2bm-dl-F35"/>
-                <constraint firstItem="ROp-dT-tKV" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="bottom" constant="5" id="84o-Sx-7HE"/>
-                <constraint firstAttribute="bottom" secondItem="LVj-R6-kks" secondAttribute="bottom" constant="10" id="NYB-xZ-oJe"/>
-                <constraint firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" id="Qgf-ne-zXe"/>
-                <constraint firstItem="LVj-R6-kks" firstAttribute="top" secondItem="ROp-dT-tKV" secondAttribute="bottom" constant="5" id="YAf-ta-7dR"/>
-                <constraint firstItem="Gm4-AS-Iby" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aWK-Io-zMX"/>
-                <constraint firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" id="chn-xr-5hC"/>
-                <constraint firstItem="LVj-R6-kks" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="hCf-Iy-RWU"/>
-                <constraint firstItem="Gm4-AS-Iby" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j5c-Gn-S5E"/>
-                <constraint firstAttribute="trailing" secondItem="ROp-dT-tKV" secondAttribute="trailing" constant="5" id="uzr-ND-Uy2"/>
-                <constraint firstItem="ea1-ws-U4V" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="top" constant="5" id="xYA-dt-noE"/>
+                <constraint firstItem="ROp-dT-tKV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="A32-il-Sdg"/>
+                <constraint firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" id="DUZ-PR-hbJ"/>
+                <constraint firstItem="ROp-dT-tKV" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="bottom" constant="5" id="DeW-Fk-Zo9"/>
+                <constraint firstItem="LVj-R6-kks" firstAttribute="top" secondItem="ROp-dT-tKV" secondAttribute="bottom" constant="5" id="GeE-4h-Zec"/>
+                <constraint firstAttribute="trailing" secondItem="ROp-dT-tKV" secondAttribute="trailing" id="LV3-b5-yl9"/>
+                <constraint firstItem="ROp-dT-tKV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Om7-44-fYf"/>
+                <constraint firstItem="ea1-ws-U4V" firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" constant="-5" id="QnL-G4-k1H"/>
+                <constraint firstItem="ROp-dT-tKV" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="bottom" constant="5" id="Qo5-dS-Y4P"/>
+                <constraint firstAttribute="bottom" secondItem="LVj-R6-kks" secondAttribute="bottom" constant="10" id="jT3-D6-KXg"/>
+                <constraint firstItem="Gm4-AS-Iby" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kRk-4u-n7V"/>
+                <constraint firstItem="ea1-ws-U4V" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="top" constant="5" id="s1a-hh-MH7"/>
+                <constraint firstItem="LVj-R6-kks" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t8E-Up-onJ"/>
+                <constraint firstAttribute="trailing" secondItem="ROp-dT-tKV" secondAttribute="trailing" id="u1l-2q-hO3"/>
+                <constraint firstItem="Gm4-AS-Iby" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xgY-0b-JFj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="149" height="201"/>
