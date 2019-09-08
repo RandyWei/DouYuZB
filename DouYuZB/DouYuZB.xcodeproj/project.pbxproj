@@ -29,6 +29,8 @@
 		B60C7DB02323C4ED001161ED /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DAE2323C4ED001161ED /* CollectionHeaderView.xib */; };
 		B60C7DB32323CF70001161ED /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7DB12323CF70001161ED /* CollectionNormalCell.swift */; };
 		B60C7DB42323CF70001161ED /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */; };
+		B60C7DB72323DC96001161ED /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */; };
+		B60C7DB82323DC96001161ED /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		B60C7DAE2323C4ED001161ED /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		B60C7DB12323CF70001161ED /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +258,8 @@
 				B60C7DA723239C43001161ED /* PageContentView.swift */,
 				B60C7DB12323CF70001161ED /* CollectionNormalCell.swift */,
 				B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */,
+				B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */,
+				B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				B60C7D5E23236AD9001161ED /* Main.storyboard in Resources */,
 				B60C7D9323236D4C001161ED /* Live.storyboard in Resources */,
 				B60C7D9123236CA2001161ED /* Home.storyboard in Resources */,
+				B60C7DB82323DC96001161ED /* CollectionPrettyCell.xib in Resources */,
 				B60C7D9723236D7D001161ED /* Profile.storyboard in Resources */,
 				B60C7D9523236D6A001161ED /* Follow.storyboard in Resources */,
 			);
@@ -404,6 +411,7 @@
 				B60C7DA823239C43001161ED /* PageContentView.swift in Sources */,
 				B60C7DA423238CC1001161ED /* PageTitleView.swift in Sources */,
 				B60C7DA1232384CC001161ED /* UIBarButtonItem-Extension.swift in Sources */,
+				B60C7DB72323DC96001161ED /* CollectionPrettyCell.swift in Sources */,
 				B60C7DB32323CF70001161ED /* CollectionNormalCell.swift in Sources */,
 				B60C7D9E23237EDE001161ED /* HomeViewController.swift in Sources */,
 			);
