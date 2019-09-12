@@ -120,6 +120,11 @@ extension PageTitleView{
         guard let currentTapLabel = ges.view as? UILabel else {
             return
         }
+        
+        if currentTapLabel.tag == currentIndex {
+            return
+        }
+        
         //上一个选中的Label
         let lastLabel = titlelLabels[currentIndex]
         

@@ -48,39 +48,49 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea1-ws-U4V">
-                        <rect key="frame" x="115" y="5" width="29" height="14"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-KJ-ndn">
+                        <rect key="frame" x="109" y="5" width="35" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.4844285102739726" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Tve-Ma-ZXi"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="ROp-dT-tKV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="A32-il-Sdg"/>
                 <constraint firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" id="DUZ-PR-hbJ"/>
                 <constraint firstItem="ROp-dT-tKV" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="bottom" constant="5" id="DeW-Fk-Zo9"/>
+                <constraint firstItem="fAb-KJ-ndn" firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" constant="-5" id="FMG-fb-A3M"/>
                 <constraint firstItem="LVj-R6-kks" firstAttribute="top" secondItem="ROp-dT-tKV" secondAttribute="bottom" constant="5" id="GeE-4h-Zec"/>
                 <constraint firstAttribute="trailing" secondItem="ROp-dT-tKV" secondAttribute="trailing" id="LV3-b5-yl9"/>
                 <constraint firstItem="ROp-dT-tKV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Om7-44-fYf"/>
-                <constraint firstItem="ea1-ws-U4V" firstAttribute="trailing" secondItem="Gm4-AS-Iby" secondAttribute="trailing" constant="-5" id="QnL-G4-k1H"/>
                 <constraint firstItem="ROp-dT-tKV" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="bottom" constant="5" id="Qo5-dS-Y4P"/>
+                <constraint firstItem="fAb-KJ-ndn" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="top" constant="5" id="fIU-dt-RcP"/>
                 <constraint firstAttribute="bottom" secondItem="LVj-R6-kks" secondAttribute="bottom" constant="10" id="jT3-D6-KXg"/>
                 <constraint firstItem="Gm4-AS-Iby" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kRk-4u-n7V"/>
-                <constraint firstItem="ea1-ws-U4V" firstAttribute="top" secondItem="Gm4-AS-Iby" secondAttribute="top" constant="5" id="s1a-hh-MH7"/>
                 <constraint firstItem="LVj-R6-kks" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t8E-Up-onJ"/>
                 <constraint firstAttribute="trailing" secondItem="ROp-dT-tKV" secondAttribute="trailing" id="u1l-2q-hO3"/>
                 <constraint firstItem="Gm4-AS-Iby" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xgY-0b-JFj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="149" height="201"/>
+            <connections>
+                <outlet property="cityButton" destination="LVj-R6-kks" id="WNi-jU-Awa"/>
+                <outlet property="coverImage" destination="Gm4-AS-Iby" id="IbX-Zm-Kpw"/>
+                <outlet property="nickNameLabel" destination="ROp-dT-tKV" id="Y7e-v2-9wH"/>
+                <outlet property="onlineButton" destination="fAb-KJ-ndn" id="gR8-ZC-W0a"/>
+            </connections>
             <point key="canvasLocation" x="203.62318840579712" y="189.17410714285714"/>
         </collectionViewCell>
     </objects>

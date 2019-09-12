@@ -15,6 +15,7 @@ class AnchorModel: NSObject {
     @objc var room_name:String = ""
     @objc var nickname:String = ""
     @objc var online:Int = 0
+    @objc var anchor_city = ""
     
     init(dict:[String:AnyObject]) {
         super.init()

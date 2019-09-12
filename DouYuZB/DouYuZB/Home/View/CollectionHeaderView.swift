@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionHeaderView: UICollectionReusableView {
     
@@ -22,7 +23,7 @@ class CollectionHeaderView: UICollectionReusableView {
             let url = group?.small_icon_url ?? "home_header_normal"
             
             if url.hasPrefix("http") {
-                iconView.image = UIImage(data: try! Data(contentsOf: URL(string: url)!))
+                iconView.kf.setImage(with: URL(string: url))
             }else{
                 iconView.image = UIImage(named: group?.small_icon_url ?? "home_header_normal")
             }

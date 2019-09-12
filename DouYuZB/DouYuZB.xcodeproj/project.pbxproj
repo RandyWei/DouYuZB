@@ -38,6 +38,7 @@
 		B6FF6A432324C15600FBF26D /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A422324C15600FBF26D /* NSDate-Extension.swift */; };
 		B6FF6A462324C48A00FBF26D /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A452324C48A00FBF26D /* AnchorGroup.swift */; };
 		B6FF6A482324C6A100FBF26D /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A472324C6A100FBF26D /* AnchorModel.swift */; };
+		B6FF6A4A232A786300FBF26D /* CollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A49232A786300FBF26D /* CollectionViewBaseCell.swift */; };
 		FF339BC4513D9F2B22461578 /* Pods_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50D18C68497700DBA785A33 /* Pods_DouYuZBUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		B6FF6A422324C15600FBF26D /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		B6FF6A452324C48A00FBF26D /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		B6FF6A472324C6A100FBF26D /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		B6FF6A49232A786300FBF26D /* CollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBaseCell.swift; sourceTree = "<group>"; };
 		BD5A8D5043A0BDA0A0FA82BB /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		C05C79ADA3D4C65DEFEB2AF9 /* Pods-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZBUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZBUITests/Pods-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1DA8260A4C2E96A77A3DD4 /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				B60C7DB22323CF70001161ED /* CollectionNormalCell.xib */,
 				B60C7DB52323DC96001161ED /* CollectionPrettyCell.swift */,
 				B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */,
+				B6FF6A49232A786300FBF26D /* CollectionViewBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,10 +520,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -561,6 +566,7 @@
 				B60C7DA623238E68001161ED /* Commons.swift in Sources */,
 				B60C7D9923236ECB001161ED /* MainViewController.swift in Sources */,
 				B60C7DA823239C43001161ED /* PageContentView.swift in Sources */,
+				B6FF6A4A232A786300FBF26D /* CollectionViewBaseCell.swift in Sources */,
 				B60C7DA423238CC1001161ED /* PageTitleView.swift in Sources */,
 				B60C7DA1232384CC001161ED /* UIBarButtonItem-Extension.swift in Sources */,
 				B6FF6A432324C15600FBF26D /* NSDate-Extension.swift in Sources */,
