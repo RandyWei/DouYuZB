@@ -12,6 +12,7 @@ class RecommendViewModel {
     lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()
     private lazy var bigDataGroup:AnchorGroup = AnchorGroup()
     private lazy var prettyGroup:AnchorGroup = AnchorGroup()
+    lazy var cycleModels:[CycleModel] = [CycleModel]()
 }
 
 
@@ -89,5 +90,22 @@ extension RecommendViewModel{
             
             callback()
         }
+    }
+    
+    func requestCycleData(callback:@escaping ()->()) {
+        Network.request(url: "https://capi.douyucdn.cn/api/v1/slide/6", methodType: MethodType.GET, params:["version":"2.300"]) { (result) in
+            //将json转成字典
+            guard result is [String: AnyObject] else {return}
+            
+            //根据获取data数组
+            guard let dataArray = result["data"] as? [[String:AnyObject]] else {return}
+            
+            for dict in dataArray {
+                let cycleModel = CycleModel(dict: dict)
+                self.cycleModels.append(cycleModel)
+            }
+            callback()
+        }
+        
     }
 }

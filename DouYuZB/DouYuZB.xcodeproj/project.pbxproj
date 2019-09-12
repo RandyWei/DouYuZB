@@ -35,6 +35,7 @@
 		B60C7DB82323DC96001161ED /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */; };
 		B63C1596232A7F2C003AA0D1 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */; };
 		B63C1598232A7F42003AA0D1 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */; };
+		B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1599232A8B9D003AA0D1 /* CycleModel.swift */; };
 		B6FF6A3E2324B9C500FBF26D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A3D2324B9C500FBF26D /* Network.swift */; };
 		B6FF6A412324BF7300FBF26D /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */; };
 		B6FF6A432324C15600FBF26D /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FF6A422324C15600FBF26D /* NSDate-Extension.swift */; };
@@ -97,6 +98,7 @@
 		B60C7DB62323DC96001161ED /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
+		B63C1599232A8B9D003AA0D1 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		B6FF6A3D2324B9C500FBF26D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		B6FF6A422324C15600FBF26D /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		B60C7D9A23237E9C001161ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B63C1599232A8B9D003AA0D1 /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				B6FF6A462324C48A00FBF26D /* AnchorGroup.swift in Sources */,
 				B60C7DAC2323BA85001161ED /* RecommendViewController.swift in Sources */,
 				B60C7DA623238E68001161ED /* Commons.swift in Sources */,
+				B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */,
 				B60C7D9923236ECB001161ED /* MainViewController.swift in Sources */,
 				B60C7DA823239C43001161ED /* PageContentView.swift in Sources */,
 				B6FF6A4A232A786300FBF26D /* CollectionViewBaseCell.swift in Sources */,

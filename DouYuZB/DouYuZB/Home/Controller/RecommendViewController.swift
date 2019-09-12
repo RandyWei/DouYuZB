@@ -72,6 +72,9 @@ extension RecommendViewController{
         recommendVM.requestData {
             self.collectionView.reloadData()
         }
+        recommendVM.requestCycleData {
+            self.recommendCycleView.cycleModels = self.recommendVM.cycleModels
+        }
     }
 }
 

@@ -13,6 +13,14 @@ private let kCycleCellId = "kCycleCellId"
 class RecommendCycleView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var cycleModels:[CycleModel]?{
+        didSet{
+            collectionView.reloadData()
+            pageControl.numberOfPages = cycleModels?.count ?? 0
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         //TODO 这个常量是什么？
@@ -37,12 +45,15 @@ extension RecommendCycleView{
 
 extension RecommendCycleView:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return cycleModels?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellId, for: indexPath)
+        
+        let cycleModel = cycleModels![indexPath.item]
+        
         cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.black : UIColor.yellow
         return cell
         
