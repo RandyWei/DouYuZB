@@ -9,6 +9,7 @@
 import UIKit
 
 class CycleModel: NSObject {
+    @objc var title:String = ""
     @objc var pic_url:String = ""
     @objc var room:[String:AnyObject]?{
         didSet{

@@ -12,10 +12,12 @@ class CollectionCycleCell: UICollectionViewCell {
 
     
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var cycleModel:CycleModel?{
         didSet{
             image.kf.setImage(with: URL(string: cycleModel!.pic_url))
+            titleLabel.text = cycleModel!.title
         }
     }
 
