@@ -26,7 +26,7 @@ class RecommendCycleView: UIView {
         //TODO 这个常量是什么？
         autoresizingMask = UIView.AutoresizingMask(rawValue: 0)
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellId)
+        collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellId)
     }
     
     override func layoutSubviews() {
@@ -50,11 +50,10 @@ extension RecommendCycleView:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellId, for: indexPath) as! CollectionCycleCell
         
         let cycleModel = cycleModels![indexPath.item]
-        
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.black : UIColor.yellow
+        cell.cycleModel = cycleModel
         return cell
         
     }
