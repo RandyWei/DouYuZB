@@ -58,3 +58,10 @@ extension RecommendCycleView:UICollectionViewDataSource{
         
     }
 }
+
+extension RecommendCycleView:UICollectionViewDelegate{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetX = scrollView.contentOffset.x
+        pageControl.currentPage = Int(offsetX/scrollView.bounds.width)
+    }
+}
