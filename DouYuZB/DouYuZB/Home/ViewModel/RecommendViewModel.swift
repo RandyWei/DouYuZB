@@ -13,6 +13,7 @@ class RecommendViewModel {
     private lazy var bigDataGroup:AnchorGroup = AnchorGroup()
     private lazy var prettyGroup:AnchorGroup = AnchorGroup()
     lazy var cycleModels:[CycleModel] = [CycleModel]()
+    lazy var gameModels:[GameModel] = [GameModel]()
 }
 
 
@@ -108,4 +109,6 @@ extension RecommendViewModel{
         }
         
     }
+    
+    
 }

@@ -11,6 +11,17 @@ import UIKit
 private let kGameViewCellID = "kGameViewCellID"
 
 class RecommendGameView: UIView {
+    
+    var anchorGroups:[AnchorGroup]?{
+        didSet{
+            anchorGroups?.removeFirst()
+            anchorGroups?.removeFirst()
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            anchorGroups?.append(moreGroup)
+            collectionView.reloadData()
+        }
+    }
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,7 +29,7 @@ class RecommendGameView: UIView {
         super.awakeFromNib()
         autoresizingMask = UIView.AutoresizingMask(rawValue: 0)
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameViewCellID)
+        collectionView.register(UINib(nibName: "CollectionGameViewCell", bundle: nil), forCellWithReuseIdentifier: kGameViewCellID)
     }
     
 }
@@ -31,12 +42,12 @@ extension RecommendGameView{
 
 extension RecommendGameView:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return anchorGroups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameViewCellID, for: indexPath)
-        cell.backgroundColor = indexPath.item%2==0 ? UIColor.red : UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameViewCellID, for: indexPath) as! CollectionGameViewCell
+        cell.anchorGroup = anchorGroups![indexPath.item]
         return cell
     }
 }

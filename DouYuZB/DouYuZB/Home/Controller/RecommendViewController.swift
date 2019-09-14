@@ -79,10 +79,12 @@ extension RecommendViewController{
     func loadData(){
         recommendVM.requestData {
             self.collectionView.reloadData()
+            self.recommendGameView.anchorGroups = self.recommendVM.anchorGroups
         }
         recommendVM.requestCycleData {
             self.recommendCycleView.cycleModels = self.recommendVM.cycleModels
         }
+        
     }
 }
 
