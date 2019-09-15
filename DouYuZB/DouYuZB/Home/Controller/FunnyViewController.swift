@@ -26,6 +26,7 @@ class FunnyViewController: BaseAnchorViewController {
         baseVm = funnyVM
         funnyVM.requestFunnyData {
             self.collectionView.reloadData()
+            self.loadDataFinished()
         }
     }
 }

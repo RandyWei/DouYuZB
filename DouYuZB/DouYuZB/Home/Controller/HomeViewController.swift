@@ -36,7 +36,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     
@@ -45,8 +44,6 @@ class HomeViewController: UIViewController {
 // MARK: - 设置界面
 extension HomeViewController{
     private func setupUI(){
-        
-        
         
         setupNavigation()
         

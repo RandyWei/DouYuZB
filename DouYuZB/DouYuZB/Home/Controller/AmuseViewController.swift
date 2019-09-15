@@ -33,6 +33,7 @@ extension AmuseViewController{
             var tmpGroups = self.amuseVM.anchorGroups
             tmpGroups.removeFirst()
             self.amuseMenuView.groups = tmpGroups
+            self.loadDataFinished()
         }
     }
     

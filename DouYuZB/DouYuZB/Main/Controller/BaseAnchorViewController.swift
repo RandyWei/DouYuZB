@@ -18,7 +18,7 @@ let kNormalCellID = "kNormalCellID"
 let kPrettyCellID = "kPrettyCellID"
 let kHeaderID = "kHeaderID"
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     var baseVm:BaseViewModel!
     lazy var collectionView:UICollectionView = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -49,8 +49,10 @@ class BaseAnchorViewController: UIViewController {
 }
 
 extension BaseAnchorViewController{
-    @objc func setupUI(){
+    override func setupUI(){
+        contentView = collectionView
         view.addSubview(collectionView)
+        super.setupUI()
     }
     @objc func loadData(){}
 }

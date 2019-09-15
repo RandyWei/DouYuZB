@@ -32,7 +32,6 @@ extension RecommendViewController{
         super.setupUI()
         
         collectionView.addSubview(recommendCycleView)
-        
         collectionView.addSubview(recommendGameView)
         //设置collection view的内边距，以达到默认显示顶部view
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kRGameViewH, left: 0, bottom: 0, right: 0)
@@ -52,6 +51,8 @@ extension RecommendViewController{
             moreGroup.tag_name = "更多"
             groups.append(moreGroup)
             self.recommendGameView.anchorGroups = groups
+            
+            self.loadDataFinished()
         }
         recommendVM.requestCycleData {
             self.recommendCycleView.cycleModels = self.recommendVM.cycleModels
