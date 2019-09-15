@@ -14,11 +14,7 @@ class RecommendGameView: UIView {
     
     var anchorGroups:[AnchorGroup]?{
         didSet{
-            anchorGroups?.removeFirst()
-            anchorGroups?.removeFirst()
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            anchorGroups?.append(moreGroup)
+            
             collectionView.reloadData()
         }
     }

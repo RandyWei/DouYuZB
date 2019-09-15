@@ -12,12 +12,29 @@ private let kEdgeMargin:CGFloat = 10
 private let kItemW:CGFloat = (kScreenWidth - 2 * kEdgeMargin) / 3
 private let kItemH:CGFloat = kItemW
 private let kHeaderH:CGFloat = 50
+private let kNormalGameViewH:CGFloat = 90
 private let kGameCellId = "kGameCellId"
 private let kHeaderId = "kHeaderId"
 
 class GameViewController: UIViewController {
     
     fileprivate lazy var gameVM:GameViewModel = GameViewModel()
+    
+    fileprivate lazy var topHeaderView:CollectionHeaderView = {
+        let collectionHeaderView = CollectionHeaderView.collectionHeaderView()
+        collectionHeaderView.frame = CGRect(x: 0, y: -(kHeaderH + kNormalGameViewH), width: kScreenWidth, height: kHeaderH)
+        collectionHeaderView.moreButton.isHidden = true
+        collectionHeaderView.titleLabel.text = "常用"
+        collectionHeaderView.iconView.image = UIImage(named: "Img_orange")
+        return collectionHeaderView
+    }()
+    
+    fileprivate lazy var topGameView:RecommendGameView = {
+        let topGameView = RecommendGameView.recommendGameView()
+        topGameView.frame = CGRect(x: 0, y: -kNormalGameViewH, width: kScreenWidth, height: kNormalGameViewH)
+        
+        return topGameView
+    }()
 
     fileprivate lazy var collectionView:UICollectionView = { [unowned self] in
         //创建布局
@@ -35,8 +52,10 @@ class GameViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        
         return collectionView
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +68,15 @@ class GameViewController: UIViewController {
 extension GameViewController{
     fileprivate func setupUI(){
         view.addSubview(collectionView)
+        collectionView.addSubview(topHeaderView)
+        collectionView.addSubview(topGameView)
+        collectionView.contentInset = UIEdgeInsets(top: kHeaderH + kNormalGameViewH, left: 0, bottom: 0, right: 0)
     }
     
     fileprivate func loadData(){
         self.gameVM.requestData {
             self.collectionView.reloadData()
+            self.topGameView.anchorGroups = Array(self.gameVM.gameModels.prefix(10))
         }
     }
     

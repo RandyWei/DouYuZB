@@ -79,6 +79,11 @@ extension RecommendViewController{
     func loadData(){
         recommendVM.requestData {
             self.collectionView.reloadData()
+            self.recommendVM.anchorGroups.removeFirst()
+            self.recommendVM.anchorGroups.removeFirst()
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            self.recommendVM.anchorGroups.append(moreGroup)
             self.recommendGameView.anchorGroups = self.recommendVM.anchorGroups
         }
         recommendVM.requestCycleData {
