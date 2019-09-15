@@ -15,6 +15,7 @@ class CollectionHeaderView: UICollectionReusableView {
     @IBOutlet weak var iconView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var moreButton: UIButton!
     
     var group:AnchorGroup?{
         didSet{

@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUu-Lp-d9T">
-                        <rect key="frame" x="20" y="5" width="50" height="50"/>
+                        <rect key="frame" x="20" y="10" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="JeV-fV-eWu"/>
                             <constraint firstAttribute="height" constant="50" id="vT6-mk-8dX"/>
@@ -33,7 +33,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTs-3y-wze">
-                        <rect key="frame" x="29.5" y="60" width="31" height="20"/>
+                        <rect key="frame" x="29.5" y="65" width="31" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="kz1-VX-35D"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="pnL-S0-fd5"/>
@@ -53,13 +53,13 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="sTs-3y-wze" firstAttribute="top" secondItem="eUu-Lp-d9T" secondAttribute="bottom" constant="5" id="1zz-Ne-ajC"/>
                 <constraint firstItem="sTs-3y-wze" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="EOP-86-QWc"/>
+                <constraint firstItem="eUu-Lp-d9T" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-10" id="J1h-S8-CqL"/>
                 <constraint firstItem="eUu-Lp-d9T" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Oi2-GI-hAu"/>
                 <constraint firstAttribute="bottom" secondItem="Ib8-L0-jQv" secondAttribute="bottom" id="VWU-e2-uYH"/>
+                <constraint firstItem="sTs-3y-wze" firstAttribute="top" secondItem="eUu-Lp-d9T" secondAttribute="bottom" constant="5" id="fvq-kl-6nw"/>
                 <constraint firstItem="Ib8-L0-jQv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wMD-Jm-Om2"/>
                 <constraint firstAttribute="trailing" secondItem="Ib8-L0-jQv" secondAttribute="trailing" id="yOU-cJ-QNM"/>
-                <constraint firstItem="eUu-Lp-d9T" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="zai-dD-5bv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="90" height="158"/>

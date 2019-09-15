@@ -11,8 +11,9 @@ import UIKit
 private let kEdgeMargin:CGFloat = 10
 private let kItemW:CGFloat = (kScreenWidth - 2 * kEdgeMargin) / 3
 private let kItemH:CGFloat = kItemW
-
+private let kHeaderH:CGFloat = 50
 private let kGameCellId = "kGameCellId"
+private let kHeaderId = "kHeaderId"
 
 class GameViewController: UIViewController {
     
@@ -26,8 +27,11 @@ class GameViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeMargin, bottom: 0, right: kEdgeMargin)
         
+        layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kHeaderH)
+        
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.register(UINib(nibName: "CollectionGameViewCell", bundle: nil), forCellWithReuseIdentifier: kGameCellId)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderId)
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -64,5 +68,13 @@ extension GameViewController :UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellId, for: indexPath) as! CollectionGameViewCell
         cell.anchorGroup = gameVM.gameModels[indexPath.item]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderId, for: indexPath) as! CollectionHeaderView
+        header.titleLabel.text = "全部"
+        header.iconView.image = UIImage(named: "Img_orange")
+        header.moreButton.isHidden = true
+        return header
     }
 }
