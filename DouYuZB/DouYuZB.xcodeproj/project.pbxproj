@@ -43,6 +43,8 @@
 		B61B37DE232DFDAA005FED65 /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61B37DD232DFDAA005FED65 /* AmuseMenuView.xib */; };
 		B61B37E1232E02C9005FED65 /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37DF232E02C9005FED65 /* AmuseMenuViewCell.swift */; };
 		B61B37E2232E02C9005FED65 /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61B37E0232E02C9005FED65 /* AmuseMenuViewCell.xib */; };
+		B61B37E4232E0D8D005FED65 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37E3232E0D8D005FED65 /* FunnyViewController.swift */; };
+		B61B37E6232E0EE8005FED65 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37E5232E0EE8005FED65 /* FunnyViewModel.swift */; };
 		B63C1596232A7F2C003AA0D1 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */; };
 		B63C1598232A7F42003AA0D1 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */; };
 		B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1599232A8B9D003AA0D1 /* CycleModel.swift */; };
@@ -123,6 +125,8 @@
 		B61B37DD232DFDAA005FED65 /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		B61B37DF232E02C9005FED65 /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		B61B37E0232E02C9005FED65 /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		B61B37E3232E0D8D005FED65 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		B61B37E5232E0EE8005FED65 /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		B63C1599232A8B9D003AA0D1 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
@@ -351,6 +355,7 @@
 				B60C7DAB2323BA85001161ED /* RecommendViewController.swift */,
 				B61B37CB232DC59D005FED65 /* GameViewController.swift */,
 				B61B37CF232DEA7F005FED65 /* AmuseViewController.swift */,
+				B61B37E3232E0D8D005FED65 /* FunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				B6FF6A402324BF7300FBF26D /* RecommendViewModel.swift */,
 				B61B37CD232DC9A9005FED65 /* GameViewModel.swift */,
 				B61B37D1232DEC00005FED65 /* AmuseViewModel.swift */,
+				B61B37E5232E0EE8005FED65 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				B60C7DA823239C43001161ED /* PageContentView.swift in Sources */,
 				B61B37D0232DEA7F005FED65 /* AmuseViewController.swift in Sources */,
 				B6FF6A4A232A786300FBF26D /* CollectionViewBaseCell.swift in Sources */,
+				B61B37E4232E0D8D005FED65 /* FunnyViewController.swift in Sources */,
 				B63C15A2232BC29F003AA0D1 /* RecommendGameView.swift in Sources */,
 				B60C7DA423238CC1001161ED /* PageTitleView.swift in Sources */,
 				B60C7DA1232384CC001161ED /* UIBarButtonItem-Extension.swift in Sources */,
@@ -671,6 +678,7 @@
 				B61B37E1232E02C9005FED65 /* AmuseMenuViewCell.swift in Sources */,
 				B63C15A7232C6624003AA0D1 /* CollectionGameViewCell.swift in Sources */,
 				B6FF6A482324C6A100FBF26D /* AnchorModel.swift in Sources */,
+				B61B37E6232E0EE8005FED65 /* FunnyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

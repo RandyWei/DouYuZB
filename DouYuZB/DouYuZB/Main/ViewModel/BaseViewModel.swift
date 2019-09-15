@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewModel {
     lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()
-    func requestAnchorData(url:String,params:[String:String]? = nil,callback:@escaping ()->())  {
+    func requestAnchorData(url:String,params:[String:String]? = nil,isGroup:Bool? = true,callback:@escaping ()->())  {
         Network.request(url: url, methodType: MethodType.GET,params: params) { (result) in
             
             //将json转成字典
@@ -19,11 +19,19 @@ class BaseViewModel {
             //根据获取data数组
             guard let dataArray = result["data"] as? [[String:AnyObject]] else {return}
             
-            for dict in dataArray {
-                let group = AnchorGroup(dict: dict)
+            if isGroup == true {
+                for dict in dataArray {
+                    let group = AnchorGroup(dict: dict)
+                    self.anchorGroups.append(group)
+                }
+            } else {
+                let group = AnchorGroup()
+                for dict in dataArray {
+                    let anchorModel = AnchorModel(dict: dict)
+                    group.anchors.append(anchorModel)
+                }
                 self.anchorGroups.append(group)
             }
-            
             callback()
         }
     }
