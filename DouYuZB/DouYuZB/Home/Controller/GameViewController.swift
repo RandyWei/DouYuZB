@@ -9,8 +9,8 @@
 import UIKit
 
 private let kEdgeMargin:CGFloat = 10
-private let kItemW:CGFloat = (kScreenWidth - 2 * kEdgeMargin) / 3
-private let kItemH:CGFloat = kItemW
+private let kGameItemW:CGFloat = (kScreenWidth - 2 * kEdgeMargin) / 3
+private let kGameItemH:CGFloat = kGameItemW
 private let kHeaderH:CGFloat = 50
 private let kNormalGameViewH:CGFloat = 90
 private let kGameCellId = "kGameCellId"
@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     fileprivate lazy var collectionView:UICollectionView = { [unowned self] in
         //创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
+        layout.itemSize = CGSize(width: kGameItemW, height: kGameItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeMargin, bottom: 0, right: kEdgeMargin)

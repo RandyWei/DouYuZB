@@ -38,6 +38,7 @@
 		B61B37D0232DEA7F005FED65 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37CF232DEA7F005FED65 /* AmuseViewController.swift */; };
 		B61B37D2232DEC00005FED65 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37D1232DEC00005FED65 /* AmuseViewModel.swift */; };
 		B61B37D5232DEFB6005FED65 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37D4232DEFB6005FED65 /* BaseViewModel.swift */; };
+		B61B37DA232DF27B005FED65 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37D9232DF27B005FED65 /* BaseAnchorViewController.swift */; };
 		B63C1596232A7F2C003AA0D1 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */; };
 		B63C1598232A7F42003AA0D1 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */; };
 		B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1599232A8B9D003AA0D1 /* CycleModel.swift */; };
@@ -113,6 +114,7 @@
 		B61B37CF232DEA7F005FED65 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		B61B37D1232DEC00005FED65 /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		B61B37D4232DEFB6005FED65 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B61B37D9232DF27B005FED65 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		B63C1599232A8B9D003AA0D1 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		B60C7D8623236AEE001161ED /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B61B37D8232DF26A005FED65 /* Controller */,
 				B61B37D3232DEFA6005FED65 /* ViewModel */,
 				B6FF6A442324C46D00FBF26D /* Model */,
 				B60C7DA223238CA7001161ED /* View */,
@@ -370,6 +373,14 @@
 				B61B37D4232DEFB6005FED65 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B61B37D8232DF26A005FED65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B61B37D9232DF27B005FED65 /* BaseAnchorViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B6FF6A3F2324BF5800FBF26D /* ViewModel */ = {
@@ -626,6 +637,7 @@
 				B6FF6A462324C48A00FBF26D /* AnchorGroup.swift in Sources */,
 				B60C7DAC2323BA85001161ED /* RecommendViewController.swift in Sources */,
 				B60C7DA623238E68001161ED /* Commons.swift in Sources */,
+				B61B37DA232DF27B005FED65 /* BaseAnchorViewController.swift in Sources */,
 				B63C159F232A8FFA003AA0D1 /* CollectionCycleCell.swift in Sources */,
 				B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */,
 				B60C7D9923236ECB001161ED /* MainViewController.swift in Sources */,

@@ -8,23 +8,8 @@
 
 import UIKit
 
-class AmuseViewModel {
-    lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()
+class AmuseViewModel:BaseViewModel {
     func requestData(callback:@escaping ()->())  {
-        Network.request(url: "https://capi.douyucdn.cn/api/v1/getHotRoom/2", methodType: MethodType.GET) { (result) in
-            
-            //将json转成字典
-            guard result is [String: AnyObject] else {return}
-            
-            //根据获取data数组
-            guard let dataArray = result["data"] as? [[String:AnyObject]] else {return}
-            
-            for dict in dataArray {
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            
-            callback()
-        }
+        requestAnchorData(url: "https://capi.douyucdn.cn/api/v1/getHotRoom/2",callback: callback)
     }
 }
