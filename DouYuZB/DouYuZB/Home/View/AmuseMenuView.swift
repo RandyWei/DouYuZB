@@ -12,6 +12,12 @@ private let kAmuseMenuCellID = "kAmuseMenuCellID"
 
 class AmuseMenuView: UIView {
     
+    var groups:[AnchorGroup]?{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -36,14 +42,29 @@ extension AmuseMenuView{
     }
 }
 
-extension AmuseMenuView:UICollectionViewDataSource{
+extension AmuseMenuView:UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if groups==nil {return 0}
+        let pageNum = ((groups!.count - 1) / 8 ) + 1
+        pageControl.numberOfPages = pageNum
+        return pageNum
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kAmuseMenuCellID, for: indexPath) as! AmuseMenuViewCell
-        
+        setupDataWithCell(cell: cell, indexPath: indexPath)
         return cell
+    }
+    
+    private func setupDataWithCell(cell: AmuseMenuViewCell,indexPath:IndexPath){
+        let startIndex = indexPath.item * 8
+        var endIndex = (indexPath.item + 1) * 8 - 1
+        if  endIndex >= groups!.count {
+            endIndex = groups!.count - 1
+        }
+        cell.groups = Array(groups![startIndex...endIndex])
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = Int(scrollView.contentOffset.x/scrollView.bounds.width)
     }
 }

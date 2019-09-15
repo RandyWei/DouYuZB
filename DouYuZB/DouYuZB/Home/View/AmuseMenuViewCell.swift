@@ -10,6 +10,13 @@ import UIKit
 private let kAmuseViewCellID = "kAmuseViewCellID"
 class AmuseMenuViewCell: UICollectionViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var groups:[AnchorGroup]?{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(UINib(nibName: "CollectionGameViewCell", bundle: nil), forCellWithReuseIdentifier: kAmuseViewCellID)
@@ -25,11 +32,12 @@ class AmuseMenuViewCell: UICollectionViewCell {
 
 extension AmuseMenuViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return groups?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kAmuseViewCellID, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kAmuseViewCellID, for: indexPath) as! CollectionGameViewCell
+        cell.clipsToBounds = true
+        cell.anchorGroup = groups![indexPath.item]
         return cell
     }
 }

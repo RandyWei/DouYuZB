@@ -30,6 +30,9 @@ extension AmuseViewController{
         baseVm = amuseVM
         amuseVM.requestData {
             self.collectionView.reloadData()
+            var tmpGroups = self.amuseVM.anchorGroups
+            tmpGroups.removeFirst()
+            self.amuseMenuView.groups = tmpGroups
         }
     }
     
