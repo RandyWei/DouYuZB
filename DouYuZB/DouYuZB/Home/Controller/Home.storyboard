@@ -38,7 +38,7 @@
         <!--Home-->
         <scene sceneID="1XM-uI-4qz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQC-IF-ceq" userLabel="Home" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQC-IF-ceq" userLabel="Home" customClass="CustomNavigationViewController" customModule="DouYuZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" selectedImage="btn_home_selected" id="XcC-cs-sEL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4V-Ft-ilC">
