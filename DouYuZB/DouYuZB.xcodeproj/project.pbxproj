@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,8 @@
 		B61B37E4232E0D8D005FED65 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37E3232E0D8D005FED65 /* FunnyViewController.swift */; };
 		B61B37E6232E0EE8005FED65 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37E5232E0EE8005FED65 /* FunnyViewModel.swift */; };
 		B61B37E8232E1598005FED65 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B37E7232E1598005FED65 /* BaseViewController.swift */; };
+		B632EDE92334CADF00D40842 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632EDE82334CADF00D40842 /* RoomShowViewController.swift */; };
+		B632EDEB2334CB4F00D40842 /* NormalRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632EDEA2334CB4F00D40842 /* NormalRoomViewController.swift */; };
 		B63C1596232A7F2C003AA0D1 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */; };
 		B63C1598232A7F42003AA0D1 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */; };
 		B63C159A232A8B9D003AA0D1 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C1599232A8B9D003AA0D1 /* CycleModel.swift */; };
@@ -129,6 +131,8 @@
 		B61B37E3232E0D8D005FED65 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		B61B37E5232E0EE8005FED65 /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		B61B37E7232E1598005FED65 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B632EDE82334CADF00D40842 /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		B632EDEA2334CB4F00D40842 /* NormalRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRoomViewController.swift; sourceTree = "<group>"; };
 		B63C1595232A7F2C003AA0D1 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		B63C1597232A7F42003AA0D1 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		B63C1599232A8B9D003AA0D1 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 		B60C7D5723236AD9001161ED /* DouYuZB */ = {
 			isa = PBXGroup;
 			children = (
+				B632EDE52334CAAD00D40842 /* Room */,
 				B60C7D8B23236B0C001161ED /* Tools */,
 				B60C7D8A23236B08001161ED /* Profile */,
 				B60C7D8923236B03001161ED /* Follow */,
@@ -401,6 +406,31 @@
 				B61B37E7232E1598005FED65 /* BaseViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B632EDE52334CAAD00D40842 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				B632EDE72334CABB00D40842 /* View */,
+				B632EDE62334CAB500D40842 /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		B632EDE62334CAB500D40842 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B632EDE82334CADF00D40842 /* RoomShowViewController.swift */,
+				B632EDEA2334CB4F00D40842 /* NormalRoomViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B632EDE72334CABB00D40842 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B6FF6A3F2324BF5800FBF26D /* ViewModel */ = {
@@ -652,6 +682,7 @@
 				B60C7DAF2323C4ED001161ED /* CollectionHeaderView.swift in Sources */,
 				B61B37E8232E1598005FED65 /* BaseViewController.swift in Sources */,
 				B60C7DAA2323A009001161ED /* UIColor-Extension.swift in Sources */,
+				B632EDEB2334CB4F00D40842 /* NormalRoomViewController.swift in Sources */,
 				B61B37CC232DC59D005FED65 /* GameViewController.swift in Sources */,
 				B61B37CE232DC9A9005FED65 /* GameViewModel.swift in Sources */,
 				B63C15AA232C673A003AA0D1 /* GameModel.swift in Sources */,
@@ -677,6 +708,7 @@
 				B60C7D9E23237EDE001161ED /* HomeViewController.swift in Sources */,
 				B6FF6A412324BF7300FBF26D /* RecommendViewModel.swift in Sources */,
 				B61B37E1232E02C9005FED65 /* AmuseMenuViewCell.swift in Sources */,
+				B632EDE92334CADF00D40842 /* RoomShowViewController.swift in Sources */,
 				B63C15A7232C6624003AA0D1 /* CollectionGameViewCell.swift in Sources */,
 				B6FF6A482324C6A100FBF26D /* AnchorModel.swift in Sources */,
 				B61B37E6232E0EE8005FED65 /* FunnyViewModel.swift in Sources */,

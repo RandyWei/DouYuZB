@@ -81,5 +81,26 @@ extension BaseAnchorViewController:UICollectionViewDataSource,UICollectionViewDe
         header.group = self.baseVm.anchorGroups[indexPath.section]
         return header
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let group = baseVm.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        
+        if anchor.isVertical == 0 {
+            pushNormalRoomVc()
+        } else {
+            presentShowRoomVc()
+        }
+    }
+    
+    private func presentShowRoomVc(){
+        let showRoomVc = RoomShowViewController()
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomVc(){
+        let normalRoomVc = NormalRoomViewController()
+        navigationController?.pushViewController(normalRoomVc, animated: true)
+    }
 }
 
