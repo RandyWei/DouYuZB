@@ -19,7 +19,7 @@ class CollectionGameViewCell: UICollectionViewCell {
                 return
             }
             titleLable.text = anchorGroup.tag_name
-            iconView.kf.setImage(with: URL(string: anchorGroup.icon_url),placeholder: UIImage(named: "home_more_btn"))
+            iconView.kf.setImage(with: URL(string: anchorGroup.small_icon_url),placeholder: UIImage(named: "home_more_btn"))
         }
     }
     
