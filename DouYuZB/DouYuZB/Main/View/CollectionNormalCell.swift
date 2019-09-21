@@ -15,7 +15,6 @@ class CollectionNormalCell: CollectionViewBaseCell {
         didSet{
             super.anchor = anchor
             roomNameLabel.text = anchor?.room_name
-            onlineButton.isHidden = true
         }
     }
 
