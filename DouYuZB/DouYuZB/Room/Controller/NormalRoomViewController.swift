@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NormalRoomViewController: UIViewController,UIGestureRecognizerDelegate {
+class NormalRoomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,6 @@ class NormalRoomViewController: UIViewController,UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
     }
     
